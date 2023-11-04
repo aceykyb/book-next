@@ -10,7 +10,7 @@ export interface SelectionJob {
     label: string;
 }
 
-export const data: SelectionJob[] = [
+const data: SelectionJob[] = [
     {
         value: "服务员",
         label: "服务员",

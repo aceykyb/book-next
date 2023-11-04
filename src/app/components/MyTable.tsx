@@ -17,7 +17,7 @@ import {
     Input,
 } from "@nextui-org/react";
 import { Staff } from "@/util/types";
-import { data } from "../add/page";
+import { SelectionJob } from "../add/page";
 
 export default function MyTable() {
     const [staffs, setStaffs] = useState<Staff[]>([]);
@@ -27,6 +27,25 @@ export default function MyTable() {
     const [staff, setStaff] = useState<Staff>();
 
     const [score, setScore] = useState<number>(0);
+
+    const data: SelectionJob[] = [
+        {
+            value: "服务员",
+            label: "服务员",
+        },
+        {
+            value: "经理",
+            label: "经理",
+        },
+        {
+            value: "主管",
+            label: "主管",
+        },
+        {
+            value: "厨师",
+            label: "厨师",
+        },
+    ]
 
     useEffect(() => {
         fetch("http://localhost:3000/api/staff", {
