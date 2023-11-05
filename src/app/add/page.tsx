@@ -79,7 +79,7 @@ export default function Add() {
                         color="success"
                         size="lg"
                         onClick={() => {
-                            fetch("http://localhost:3000/api/staff", {
+                            fetch(process.env.API_ADDRESS + "/staff", {
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json",

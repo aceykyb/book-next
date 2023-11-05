@@ -48,7 +48,7 @@ export default function MyTable() {
     ]
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/staff", {
+        fetch(process.env.API_ADDRESS + "/staff", {
             method: "GET",
         })
             .then((response) => response.json())
@@ -82,7 +82,7 @@ export default function MyTable() {
                     <Button
                         color="primary"
                         onClick={() => {
-                            fetch("http://localhost:3000/api/staff/score", {
+                            fetch(process.env.API_ADDRESS + "/staff/score", {
                                 method: "PUT",
                                 headers: {
                                     "Content-Type": "application/json",
@@ -133,7 +133,7 @@ export default function MyTable() {
                     <Button
                         color="primary"
                         onClick={() => {
-                            fetch("http://localhost:3000/api/staff/job", {
+                            fetch(process.env.API_ADDRESS + "/staff/job", {
                                 method: "PUT",
                                 headers: {
                                     "Content-Type": "application/json",
@@ -177,7 +177,7 @@ export default function MyTable() {
                         <Button
                             color="primary"
                             onClick={() => {
-                                fetch("http://localhost:3000/api/staff", {
+                                fetch(process.env.API_ADDRESS + "/staff", {
                                     method: "DELETE",
                                     headers: {
                                         "Content-Type": "application/json",
